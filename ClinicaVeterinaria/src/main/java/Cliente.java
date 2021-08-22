@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -73,12 +74,17 @@ public class Cliente {
         }
     }
     
-    public void addAnimal(Animal animal){
-        animais.add(animal);
+    public boolean addAnimal(Animal animal){
+        if(!animal.getNome().isEmpty()){
+            animais.add(animal);
+            return true;
+        }
+        return false;
     }
     
     public List<Animal> getAnimais(){
-        return animais;
+        List<Animal> copia = new ArrayList<Animal>(animais);        
+        return copia;
     }
     
     @Override
