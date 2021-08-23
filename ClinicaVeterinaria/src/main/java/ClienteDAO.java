@@ -40,7 +40,7 @@ public class ClienteDAO extends DAO {
     public boolean isLastEmpty(){
         Cliente lastClient = this.retrieveById(lastId("cliente","id"));
         if (lastClient != null) {
-            return lastClient.getNome().isBlank();
+            return lastClient.getNome().isEmpty();
         }
         return false;
     }
