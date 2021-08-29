@@ -4,20 +4,15 @@
  */
 public class Main {
      public static void main(String[] args) {
-        //System.out.println("Funcionando!");
-        Cliente c1 = new Cliente(01,"Victor","Rua Palmeiras","12345","54321","victorcalebe@.com");
-        c1.setEmail("calebe@eu.com");
         
-        Animal a1 = new Animal(01,"Bolis",03,01);
-        Animal a2 = new Animal(02,"Bilbo",07,01);
+        Cliente victor = ClienteDAO.getInstance().retrieveById(2);
+         
+        //ClienteDAO.getInstance().create("Spiderman","New York City","921456789","00234-900","spider@avengers.com");
+        AnimalDAO.getInstance().create("Bilbo", 2015, "Macho", 1, victor);
         
-        c1.addAnimal(a1);
-        c1.addAnimal(a2);
-        
-        //System.out.println(c1);
-
-        ClienteDAO.getInstance().create("Spiderman","New York City","921456789","00234-900","spider@avengers.com");
-        
-        System.out.println(ClienteDAO.getInstance().retrieveAll());
+        //System.out.println(ClienteDAO.getInstance().retrieveAll());
+        System.err.println(AnimalDAO.getInstance().retrieveAll());
+        //System.out.println(ClienteDAO.getInstance().retrieveById(2));
+                
     }
 }
