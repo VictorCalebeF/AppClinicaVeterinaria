@@ -5,14 +5,18 @@
 public class Animal {
     private int id;
     private String nome;
-    private int idade;
-    private int sexo;// 0-macho 1-femea
+    private int anoNasc;
+    private String sexo;// macho femea
+    private int idEspecie;
+    private int idCliente;
 
-    public Animal(int id, String nome, int idade, int sexo){
+    public Animal(int id, String nome, int anoNasc, String sexo, int idEspecie, int idCliente){
         this.id = id;
         this.nome = nome;
-        this.idade = idade;
+        this.anoNasc = anoNasc;
         this.sexo = sexo;
+        this.idEspecie = idEspecie;
+        this.idCliente = idCliente;
     }
 
     public int getId() {
@@ -31,25 +35,41 @@ public class Animal {
         this.nome = nome;
     }
 
-    public int getIdade() {
-        return idade;
+    public int getanoNasc() {
+        return anoNasc;
     }
 
-    public void setIdade(int idade) {
-        this.idade = idade;
+    public void setanoNasc(int anoNasc) {
+        this.anoNasc = anoNasc;
     }
 
-    public int getSexo() {
+    public String getSexo() {
         return sexo;
     }
 
-    public void setSexo(int sexo) {
+    public void setSexo(String sexo) {
         this.sexo = sexo;
+    }
+    
+    public int getIdEspecie() {
+        return idEspecie;
+    }
+
+    public void setIdEspecie(int idEspecie) {
+        this.idEspecie = idEspecie;
+    }
+
+    public int getIdCliente() {
+        return idCliente;
+    }
+
+    public void setIdCliente(int idCliente) {
+        this.idCliente = idCliente;
     }
 
     @Override
     public String toString() {
-        return "Animal{" + "id=" + id + ", nome=" + nome + ", idade=" + idade + ", sexo=" + sexo + '}';
+        return "Animal{" + "id=" + id + ", nome=" + nome + ", anoNasc=" + anoNasc + ", sexo=" + sexo + '}';
     }
     
     
