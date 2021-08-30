@@ -1,21 +1,24 @@
 /**
  *
- * @author Victor Calebe
+ * @author victor Calebe
  */
 public class Main {
      public static void main(String[] args) {
-        System.out.println("Funcionando!");
-        Cliente c1 = new Cliente(01,"Victor","Rua Palmeiras","12345","54321","victorcalebe@.com");
-        c1.setEmail("calebe@eu.com");
         
-        Animal a1 = new Animal(01,"Bolis",03,01);
-        Animal a2 = new Animal(02,"Bilbo",07,01);
+        Cliente calebe = ClienteDAO.getInstance().retrieveById(1);
+         
+        //ClienteDAO.getInstance().create("calebe","Campinas","123456789","00789-450","calebe@calebe.com");
+        //ClienteDAO.getInstance().create("neymar","Paris","879456123","00000-700","neymar@neymar.com");
+        //AnimalDAO.getInstance().create("Bolis", 2013, "Macho", 7, calebe);
         
-        c1.addAnimal(a1);
-        c1.addAnimal(a2);
         
-        System.out.println(c1);
-
+        //System.out.println(ClienteDAO.getInstance().retrieveAll());
+        //System.err.println(AnimalDAO.getInstance().retrieveAll());
         
+        System.out.println(ClienteDAO.getInstance().retrieveById(3));
+        System.out.println(AnimalDAO.getInstance().retrieveById(7));
+        System.out.println(AnimalDAO.getInstance().retrieveById(8));
+        System.out.println(AnimalDAO.getInstance().retrieveById(9));
+                
     }
 }
