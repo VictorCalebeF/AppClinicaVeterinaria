@@ -1,3 +1,6 @@
+package model;
+
+import model.Animal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
