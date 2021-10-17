@@ -1,3 +1,6 @@
+package model;
+
+import model.Animal;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;

@@ -1,8 +1,10 @@
+package model;
+
 /**
  *
  * @author Victor Calebe
  */
-public class Animal {
+public class Animal {   
     private int id;
     private String nome;
     private int anoNasc;

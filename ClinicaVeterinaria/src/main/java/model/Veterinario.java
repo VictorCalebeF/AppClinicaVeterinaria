@@ -1,16 +1,24 @@
+package model;
+
 /**
  *
  * @author Victor Calebe
  */
 public class Veterinario {
+    private int id;
     private String nome;
     private String email;
     private String telefone;
 
-    public Veterinario(String nome, String email, String telefone) {
+    public Veterinario(String nome, String email, String telefone, int id) {
         this.nome = nome;
         this.email = email;
         this.telefone = telefone;
+        this.id = id;
+    }
+    
+    public int getId() {
+        return id;
     }
 
     public String getNome() {

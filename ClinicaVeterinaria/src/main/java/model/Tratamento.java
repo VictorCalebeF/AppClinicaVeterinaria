@@ -1,3 +1,5 @@
+package model;
+
 /**
  *
  * @author Victor Calebe
@@ -6,13 +8,15 @@
 import java.util.Calendar;
 
 public class Tratamento {
+    private int id;
     private String nome;
     private Calendar dtInicio;
     private Calendar dtFim;
     private int idAnimal;
     private boolean terminou;
 
-    public Tratamento(String nome, Calendar dtInicio, Calendar dtFim, int idAnimal, boolean terminou) {
+    public Tratamento(int id, String nome, Calendar dtInicio, Calendar dtFim, int idAnimal, boolean terminou) {
+        this.id = id;
         this.nome = nome;
         this.dtInicio = dtInicio;
         this.dtFim = dtFim;
@@ -20,6 +24,10 @@ public class Tratamento {
         this.terminou = terminou;
     }
 
+    public int getId() {
+        return id;
+    }
+    
     public String getNome() {
         return nome;
     }
