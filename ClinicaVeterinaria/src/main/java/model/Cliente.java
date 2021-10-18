@@ -69,6 +69,22 @@ public class Cliente {
         }
     }
     
+    public void setEndereco(String endereco){
+        if(!endereco.equals("")){
+            this.endereco = endereco;
+        }else{
+            System.out.println("O campo endereco esta vazio!");
+        }
+    }
+    
+    public void setTelefone(String telefone){
+        if(!telefone.equals("")){
+            this.telefone = telefone;
+        }else{
+            System.out.println("O campo telefone esta vazio!");
+        }
+    }
+    
     public void setCep(String cep){
         if(!cep.equals("")){
             this.cep = cep;
